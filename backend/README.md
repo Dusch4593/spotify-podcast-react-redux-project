@@ -1,24 +1,16 @@
-# README
+# Spotify Podcast React/ Redux Project (Backend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository is dedicated to the backend of the application at-large. It runs on Rails, using a RESTful API for persisting data and reflecting state-updates from the frontend.
 
-Things you may want to cover:
+# Tools & Technologies
 
-* Ruby version
+Ruby 2.6.1
 
-* System dependencies
+Rails 6.0.3
 
-* Configuration
 
-* Database creation
+# Configuration
 
-* Database initialization
+## Database setup
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Usage
