@@ -25,4 +25,18 @@ class CollectionsController < ApplicationController
   def set_collection
     @collection = Collection.find_by(id: params[:id])
   end
+
+  def collection_params
+    params.require(:collection).permit(
+      :name,
+      :podcasts_attributes: [
+        :id,
+        :name,
+        :hosts,
+        :genres,
+        :link,
+        :collection_ids
+      ]
+    )
+  end
 end
