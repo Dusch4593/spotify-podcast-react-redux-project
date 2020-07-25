@@ -5,6 +5,7 @@ import Collections from './containers/Collections'
 import CollectionNew from './containers/CollectionNew'
 
 class App extends Component {
+
   render() {
     return (
       <Router>
