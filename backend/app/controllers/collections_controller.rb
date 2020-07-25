@@ -13,12 +13,30 @@ class CollectionsController < ApplicationController
 
   # POST /collections
   def create
+    @collection = Collection.new(collection_params)
 
+    if @collection.save
+      render json: @collection
+    else
+      render json: @collection.errors
+    end
   end
 
   # PATCH/ PUT collections/:id
+  def update
+    if @collection.update(collection_params)
+      render json: @collection
+    else
+      render json: @collection.errors
+    end
+  end
 
   # DELETE collections/:id
+  def delete
+    @collection.destroy
+    render json: @collection
+  end
+
 
   private
 
