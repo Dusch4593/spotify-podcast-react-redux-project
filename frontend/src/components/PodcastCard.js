@@ -3,12 +3,14 @@ import { connect } from 'react-redux'
 import { deletePodcast } from '../actions/index'
 import DeleteButton from './DeleteButton'
 
-const PodcastCard = ({podcast, id, deletePodcast}) => {
+const PodcastCard = ({podcast, deletePodcast}) => {
   return (
     <div>
       {podcast.name} hosted by {podcast.hosts} <br />
-      {podcast.genres}
-      < DeleteButton name="Delete Podcast" podcast_id={id} deletePodcast={deletePodcast}/>
+      {podcast.genres} <br />
+      <a href={podcast.link}>Give it a Listen!</a> <br />
+      < DeleteButton name="Delete Podcast" podcast_id={podcast.id} deletePodcast={deletePodcast}/>
+      <br /><br />
     </div>
   )
 }
