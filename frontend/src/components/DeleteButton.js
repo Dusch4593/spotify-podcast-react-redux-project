@@ -2,7 +2,7 @@ import React from 'react'
 
 const DeleteButton = props => {
   return (
-    <button>{props.name}</button>
+    <button onClick={() => props.deletePodcast(props.podcast_id)}>{props.name}</button>
   )
 }
 
