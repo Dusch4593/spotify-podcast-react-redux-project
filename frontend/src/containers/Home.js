@@ -5,8 +5,8 @@ class Home extends Component {
     return (
       <div>
         <h1>Welcome To My Podcasts App!</h1>
-        <a href="/podcasts">View Podcasts</a> <br />
-        <a href="/podcasts/new">Add New Podcast</a> <br />
+        <a className="home-page-link" href="/podcasts">View Podcasts</a> <br />
+        <a className="home-page-link" href="/podcasts/new">Add New Podcast</a> <br />
       </div>
     )
   }

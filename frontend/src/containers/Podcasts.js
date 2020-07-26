@@ -16,7 +16,7 @@ class Podcasts extends Component {
 
   render() {
     return(
-      <div>
+      <div className="podcasts-container">
         < AddButton name="Add Podcast" addPodcast={this.props.addPodcast}/>
         {this.props.podcasts.map((p, id) => < PodcastCard key={id} podcast={p} />)}
       </div>

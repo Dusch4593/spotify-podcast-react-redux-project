@@ -5,10 +5,10 @@ import DeleteButton from './DeleteButton'
 
 const PodcastCard = ({podcast, deletePodcast}) => {
   return (
-    <div>
-      {podcast.name} hosted by {podcast.hosts} <br />
-      {podcast.genres} <br />
-      <a href={podcast.link}>Give it a Listen!</a> <br />
+    <div className="podcast-card">
+      <span id="podcast-name">{podcast.name}</span> hosted by <span id="podcast-hosts">{podcast.hosts}</span> <br />
+      Genres: <span id="podcast-genres">{podcast.genres}</span> <br />
+      <a id="podcast-link" href={podcast.link}>Give it a Listen!</a> <br />
       < DeleteButton name="Delete Podcast" podcast_id={podcast.id} deletePodcast={deletePodcast}/>
       <br /><br />
     </div>
