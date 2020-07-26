@@ -9,9 +9,28 @@ class PodcastsController < ApplicationController
     render json: @podcast
   end
 
+  def create
+    @new_podcast = Podcast.new(podcast_params)
+
+    if @new_podcast.save
+      render json: @new_podcast
+    else
+      render json: @new_podcast.errors
+    end
+  end
+
+  def destroy
+    @podcast.destory
+    render json: @podcast
+  end
 
   private
   def set_podcast
     @podcast = Podcast.find_by(params[:id])
   end
+
+  def podcast_params
+    params.require(:podcast).permit(:name, :hosts, :genres, :link)
+  end
+
 end
