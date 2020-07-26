@@ -1,20 +1,17 @@
-// fetch the collection data from the Rails backend
-// => GET localhost:3001/collections
-export const getCollections = () => {
-  return { type: "GET_COLLECTIONS"}
+// fetch (GET) the current list of podcasts in the Rails backend
+// => GET localhost:3001/podcasts
+export const fetchPodcasts = () => {
+  return {type: "GET_PODCASTS"}
 }
 
-// add a new collection to the DB (with or without podcasts)
-// => POST localhost:3001/collections
-
-// remove (DELETE) a specific collection (:id) from both the frontend and the backend
-// => DELETE localhost:3001/collections/:id
-
-// fetch specific podcast data from a given collection
-// => GET localhost:3001/collections/:id/podcasts/:id
-
-// add (POST) a new podcast to a the DB (to a specific collection => /collections/:id/podcasts)
-// => POST localhost:3001/collections/:id/podcasts
+// add (POST) a new podcast to a the DB
+// => POST localhost:3001/podcasts
+export const addPodcast = podcast => {
+  return {type: "ADD_PODCAST", payload: podcast}
+}
 
 // remove (DELETE) a specific podcast (:id) from both the frontend and the backend
-// => DELETE localhost:3001/collections/:id/podcasts/:id
+// => DELETE localhost:3001/podcasts/:id
+export const deletePodcast = podcastId => {
+  return {type: "REMOVE_PODCAST", payload: podcastId}
+}
