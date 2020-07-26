@@ -7,7 +7,6 @@ import Podcasts from './containers/Collections'
 import PodcastsNew from './containers/CollectionNew'
 
 class App extends Component {
-
   render() {
     return (
       <Router>
