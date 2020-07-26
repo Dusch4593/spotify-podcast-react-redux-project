@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './containers/Home'
 import Podcasts from './containers/Podcasts'
 import NavBar from './components/NavBar'
-// TODO: Will re-import after changes below
+import Footer from './components/Footer'
 import PodcastsNew from './containers/PodcastNew'
 
 class App extends Component {
@@ -18,6 +18,7 @@ class App extends Component {
             <Route exact path="/podcasts" component={ Podcasts } />
           </Switch>
         </div>
+        < Footer />
       </Router>
     );
   }
