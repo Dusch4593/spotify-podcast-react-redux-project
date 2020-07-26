@@ -12,22 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2020_07_24_132445) do
 
-  create_table "collections", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "podcasts", force: :cascade do |t|
-    t.integer "collection_id", null: false
     t.string "name"
     t.string "hosts"
     t.string "genres"
     t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["collection_id"], name: "index_podcasts_on_collection_id"
   end
 
-  add_foreign_key "podcasts", "collections"
 end

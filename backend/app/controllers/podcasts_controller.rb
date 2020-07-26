@@ -1,8 +1,7 @@
 class PodcastsController < ApplicationController
   before_action :set_podcast, only: [:show, :update, :destroy]
   def index
-    @podcasts = Collection.find_by(params[:collection_id]).podcasts
-
+    @podcasts = Podcast.all
     render json: @podcasts
   end
 
