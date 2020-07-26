@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import PodcastCard from '../components/PodcastCard'
 import { connect } from 'react-redux'
 import AddButton from '../components/AddButton'
-import DeleteButton from '../components/DeleteButton'
-import { fetchPodcasts, addPodcast, deletePodcast } from '../actions/index'
+import { fetchPodcasts, addPodcast} from '../actions/index'
 
 class Podcasts extends Component {
 
@@ -15,12 +14,7 @@ class Podcasts extends Component {
     return(
       <div>
         < AddButton name="Add Podcast" addPodcast={this.props.addPodcast}/>
-        {this.props.podcasts.map((p, id) => (
-          <div>
-            < PodcastCard key={id} podcast={p} />
-            < DeleteButton key={id} name="Delete Podcast" podcast_id={id} deletePodcast={this.props.deletePodcast}/>
-          </div>
-        ))}
+        {this.props.podcasts.map((p, id) => < PodcastCard key={id} podcast={p} id={id}/>)}
       </div>
     )
   }
@@ -35,8 +29,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchPodcasts: () => dispatch(fetchPodcasts()),
-    addPodcast: podcast => dispatch(addPodcast(podcast)),
-    deletePodcast: podcastId => dispatch(deletePodcast(podcastId))
+    addPodcast: podcast => dispatch(addPodcast(podcast))
   }
 }
 

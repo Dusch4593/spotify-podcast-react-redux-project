@@ -1,12 +1,16 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { deletePodcast } from '../actions/index'
+import DeleteButton from './DeleteButton'
 
-const PodcastCard = props => {
+const PodcastCard = ({podcast, id, deletePodcast}) => {
   return (
     <div>
-      {props.podcast.name} hosted by {props.podcast.hosts} <br />
-      {props.podcast.genres}
+      {podcast.name} hosted by {podcast.hosts} <br />
+      {podcast.genres}
+      < DeleteButton name="Delete Podcast" podcast_id={id} deletePodcast={deletePodcast}/>
     </div>
   )
 }
 
-export default PodcastCard
+export default connect(null, { deletePodcast })(PodcastCard)
