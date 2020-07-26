@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './containers/Home'
-import Podcasts from './containers/Collections'
+import Podcasts from './containers/Podcasts'
+import NavBar from './components/NavBar'
 // TODO: Will re-import after changes below
-//import Collection from './containers/Collection'
-import PodcastsNew from './containers/CollectionNew'
+import PodcastsNew from './containers/PodcastNew'
 
 class App extends Component {
   render() {
     return (
       <Router>
+        < NavBar />
         <div className="main-container">
           <Switch>
             <Route exact path="/" component={ Home } />
             <Route exact path="/podcasts/new" component={ PodcastsNew } />
             <Route exact path="/podcasts" component={ Podcasts } />
-            // TODO: User render attr to pass props to the PodcastCard component? (stateless)
-            //<Route exact path="/podcasts/:id" component={ Podcast } />
           </Switch>
         </div>
       </Router>
