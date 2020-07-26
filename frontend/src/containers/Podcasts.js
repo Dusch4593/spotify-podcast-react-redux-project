@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PodcastCard from '../components/PodcastCard'
+import { connect } from 'react-redux'
 
 class Podcasts extends Component {
   render() {
@@ -14,4 +15,10 @@ class Podcasts extends Component {
   }
 }
 
-export default Podcasts
+const mapStateToProps = state => {
+  return {
+    podcasts: state.podcasts
+  }
+}
+
+export default connect(mapStateToProps)(Podcasts)
