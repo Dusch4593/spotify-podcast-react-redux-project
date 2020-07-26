@@ -20,13 +20,14 @@ class PodcastsController < ApplicationController
   end
 
   def destroy
-    @podcast.destory
+
+    @podcast.destroy
     render json: @podcast
   end
 
   private
   def set_podcast
-    @podcast = Podcast.find_by(params[:id])
+    @podcast = Podcast.find_by_id(params[:id])
   end
 
   def podcast_params
