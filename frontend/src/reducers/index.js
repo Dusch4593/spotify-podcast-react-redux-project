@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import collections from './CollectionsReducer'
+import podcasts from './PodcastsReducer'
 
 export default combineReducers({
-  collections
+  podcasts
 })
