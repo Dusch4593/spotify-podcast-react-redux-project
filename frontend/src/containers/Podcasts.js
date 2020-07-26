@@ -3,7 +3,6 @@ import PodcastCard from '../components/PodcastCard'
 
 class Podcasts extends Component {
   render() {
-    debugger
     return(
       <div>
 
