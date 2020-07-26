@@ -1,7 +1,7 @@
 export default (state = [], action) => {
   switch(action.type) {
     case "GET_PODCASTS":
-      return [...state]
+      return [...action.payload]
     case "ADD_PODCAST":
       return [...state, action.payload]
     case "REMOVE_PODCAST":
