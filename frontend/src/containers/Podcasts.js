@@ -10,11 +10,15 @@ class Podcasts extends Component {
     this.props.fetchPodcasts()
   }
 
+  componentDidUpdate() {
+    this.props.fetchPodcasts()
+  }
+
   render() {
     return(
       <div>
         < AddButton name="Add Podcast" addPodcast={this.props.addPodcast}/>
-        {this.props.podcasts.map((p, id) => < PodcastCard key={id} podcast={p} id={id}/>)}
+        {this.props.podcasts.map((p, id) => < PodcastCard key={id} podcast={p} />)}
       </div>
     )
   }
