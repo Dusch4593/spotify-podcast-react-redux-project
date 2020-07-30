@@ -10,10 +10,6 @@ class Podcasts extends Component {
     this.props.fetchPodcasts()
   }
 
-  componentDidUpdate() {
-    this.props.fetchPodcasts()
-  }
-
   render() {
     return(
       <div className="podcasts-container">
