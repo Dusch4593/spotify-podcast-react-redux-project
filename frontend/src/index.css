@@ -1,3 +1,5 @@
+
+/* meta-styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,17 +9,29 @@ body {
   color: #fff;
 }
 
+#main-container {
+  display: grid;
+  grid-template-areas: "nav content";
+}
+
+
+/* links for the Home component */
 .home-page-link {
   display: flex;
   flex-direction: column;
   color: #fff;
 }
 
+
+/* nav styles*/
 #navbar {
   background-color: #1DB954;
+  display: flex;
+  flex-direction: column;
+  grid-area: nav;
 }
 
-.nav-links {
+#nav-links {
   display: flex;
   justify-content: space-between;
   width: 30%;
@@ -34,7 +48,11 @@ li > a {
   font-size: 1.5em;
 }
 
+
+
+/* podcast styles */
 .podcasts-container {
+  grid-area: content;
   margin-top: 1em;
   padding: 0.5em;
   background-color: #1DB954;

@@ -5,11 +5,13 @@ class NavBar extends Component {
   render() {
     return (
       <div id="navbar">
-        <ul className="nav-links">
-          <li>< NavLink to="/">Home</ NavLink ></li>
-          <li>< NavLink to="/podcasts/new">Add Podcast</ NavLink ></li>
-          <li>< NavLink to="/podcasts">See All Podcasts</ NavLink ></li>
-        </ul>
+        <nav id="nav-bar-container">
+          <ul id="nav-links">
+            <li className="nav-link">< NavLink to="/">Home</ NavLink ></li>
+            <li className="nav-link">< NavLink to="/podcasts/new">Add Podcast</ NavLink ></li>
+            <li className="nav-link">< NavLink to="/podcasts">See All Podcasts</ NavLink ></li>
+          </ul>
+        </nav>
       </div>
     )
   }
