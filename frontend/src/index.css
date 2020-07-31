@@ -19,6 +19,10 @@ body {
   grid-template-areas: "nav content";
 }
 
+#home-container {
+  margin-top: 1em;
+}
+
 
 /* links for the Home component */
 .home-page-link {
