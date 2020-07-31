@@ -23,10 +23,12 @@ export const addPodcast = podcast => {
     })
       .then(res => res.json())
       .then(podcast => {
+
         dispatch({type: "ADD_PODCAST", payload: podcast})
       })
   }
 }
+
 
 // remove (DELETE) a specific podcast (:id) from both the frontend and the backend
 // => DELETE localhost:3001/podcasts/:id

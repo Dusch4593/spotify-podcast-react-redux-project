@@ -33,7 +33,7 @@ class PodcastNew extends Component {
         <label>Name</label> <br />
         <input type="text" onChange={this.handleChange} value={this.state.name} name="name"/>
         <br /> <br />
-        
+
         <label>Hosts/ Publisher (if applicable)</label> <br />
         <input type="text" onChange={this.handleChange} value={this.state.hosts} name="hosts"/>
         <br /> <br />
@@ -46,10 +46,11 @@ class PodcastNew extends Component {
         <input type="text" onChange={this.handleChange} value={this.state.link} name="link"/>
         <br /> <br />
 
-        <input type="submit" value="Create New Collection" />
+        <input type="submit" value="Create Podcast" />
       </form>
     )
   }
 }
+
 
 export default connect(null, { addPodcast })(PodcastNew)

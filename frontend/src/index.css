@@ -9,6 +9,11 @@ body {
   color: #fff;
 }
 
+#root {
+  height: 100%;
+  position: relative;
+}
+
 #main-container {
   display: grid;
   grid-template-areas: "nav content";
@@ -29,14 +34,20 @@ body {
   display: flex;
   flex-direction: column;
   grid-area: nav;
+  margin-top: 1em;
 }
 
 #nav-links {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 30%;
   padding: 1em;
   list-style: none;
+}
+
+.nav-link {
+  padding-bottom: 1em;
 }
 
 li > a {

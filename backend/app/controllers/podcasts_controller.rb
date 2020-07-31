@@ -20,7 +20,6 @@ class PodcastsController < ApplicationController
   end
 
   def destroy
-
     @podcast.destroy
     render json: @podcast
   end
